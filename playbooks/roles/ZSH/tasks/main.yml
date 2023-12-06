@@ -17,6 +17,12 @@
     repo: https://github.com/unixorn/fzf-zsh-plugin.git
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/fzf-zsh-plugin"
 
+- name: Clone Powerline10k
+  ansible.builtin.git:
+    depth: 1
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/powerlevel10k"
+
 - name: Append to  ~/.zshrc file
   blockinfile:
     state: present
@@ -30,8 +36,9 @@
       {% endfor %}
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"                    # Load Homebrew
       eval "$(direnv hook zsh)"                                                 # Load Direnv
-      eval "$(starship init zsh)"                                               # Load Starship
-      export STARSHIP_CONFIG=~/.config/starship.toml                            # Point Starship to it's config
+      ## STARSHIP
+      # eval "$(starship init zsh)"                                               # Load Starship
+      # export STARSHIP_CONFIG=~/.config/starship.toml                            # Point Starship to it's config
 
 - name: Debug message '#1'
   ansible.builtin.debug:
