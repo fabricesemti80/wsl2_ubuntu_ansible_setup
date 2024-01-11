@@ -4,7 +4,9 @@ homebrew_packages:
     - awscli
     - bat
     - direnv
+    - dog
     - go-task
+    - govc
     - nodejs
     - starship
     #- python
@@ -13,3 +15,4 @@ homebrew_packages:
     - tgenv
     - fzf
     - ranger
+    - neovim
