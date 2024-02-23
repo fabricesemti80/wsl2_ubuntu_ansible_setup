@@ -1,5 +1,5 @@
 ---
-version: '3'
+version: "3"
 
 tasks:
   list:
@@ -51,6 +51,11 @@ tasks:
     desc: SSH client and server configuration
     cmds:
       - ansible-playbook playbooks/machineconfig.yml --tags "ssh"  -i hosts.yml
+
+  sshoot:
+    desc: Set up SSH tunneling
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "sshoot"  -i hosts.yml -K
 
   sys:
     desc: Tasks configuring the Linux system in general
