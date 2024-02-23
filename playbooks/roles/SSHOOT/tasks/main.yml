@@ -1,11 +1,11 @@
 ---
 - name: Close VPNs
-  command: sshoot stop {{ item.vpn_name }} > /dev/null 2>&1
+  command: sshoot stop {{ item.vpn_name }}
   with_items: "{{ tunnels }}"
   ignore_errors: true
 
 - name: Remove VPNs
-  command: sshoot delete  {{ item.vpn_name }} > /dev/null 2>&1
+  command: sshoot delete  {{ item.vpn_name }}
   with_items: "{{ tunnels }}"
   ignore_errors: true
 
