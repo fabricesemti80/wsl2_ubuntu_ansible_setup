@@ -17,6 +17,12 @@
     repo: https://github.com/unixorn/fzf-zsh-plugin.git
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/fzf-zsh-plugin"
 
+- name: Clone plugin repo `Autocomplete`
+  ansible.builtin.git:
+    depth: 1
+    repo: https://github.com/marlonrichert/zsh-autocomplete.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-autocomplete"
+
 - name: Append to  ~/.zshrc file
   blockinfile:
     state: present
