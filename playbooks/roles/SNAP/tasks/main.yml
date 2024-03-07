@@ -1,0 +1,10 @@
+---
+- name: Install Snap
+  include_role:
+    name: don_rumata.ansible_role_install_snap
+
+# Install "foo" and "bar" snap
+# Install a snap with classic confinement
+- name: Install "foo" with option --classic
+  become: true
+  command: snap install --classic sshoot

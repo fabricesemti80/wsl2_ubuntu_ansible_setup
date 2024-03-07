@@ -47,6 +47,11 @@ tasks:
     cmds:
       - ansible-playbook playbooks/machineconfig.yml --tags "python"  -i hosts.yml -K
 
+  snap:
+    desc: Tasks using Snapd
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "snap"  -i hosts.yml -K
+      -
   ssh:
     desc: SSH client and server configuration
     cmds:

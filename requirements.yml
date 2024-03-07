@@ -1,0 +1,5 @@
+---
+#? ansible-galaxy install -r requirements.yml
+roles:
+  - name: don_rumata.ansible_role_install_snap
+    src: https://github.com/don-rumata/ansible-role-install-snap
