@@ -1,26 +1,22 @@
 ---
 #? ansible-galaxy install -r requirements.yml
+collections:
+  - name: bec.shell
+
 roles:
   - name: don_rumata.ansible_role_install_snap
     src: https://github.com/don-rumata/ansible-role-install-snap
 
-  - name: gantsign.minikube
-    src: galaxy
-
   - name: danielrolls.nix
-    src: galaxy
 
   - name: dotstrap.fzf
-    src: galaxy
+
+  - name: gantsign.antigen
+
+  - name: gantsign.minikube
 
   - name: gantsign.oh-my-zsh
-    src: galaxy
 
   - name: geerlingguy.docker
-    src: galaxy
 
   - name: geerlingguy.pip
-    src: galaxy
-
-collections:
-  - name: bec.shell
