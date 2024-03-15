@@ -12,7 +12,7 @@ zsh_config_backup: true
 users:
   - username: "{{  primary_user_name }}"
     oh_my_zsh:
-      theme: agnoster
+      theme: powerlevel10k/powerlevel10k # agnoster
       plugins:
         - git
         - fzf-zsh-plugin

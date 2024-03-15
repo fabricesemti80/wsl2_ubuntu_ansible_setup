@@ -36,8 +36,9 @@
       {% endfor %}
       eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"                    # Load Homebrew
       eval "$(direnv hook zsh)"                                                 # Load Direnv
-      eval "$(starship init zsh)"                                               # Load Starship
-      export STARSHIP_CONFIG=~/.config/starship.toml                            # Point Starship to it's config
+      ## STARSHIP
+      # eval "$(starship init zsh)"                                               # Load Starship
+      # export STARSHIP_CONFIG=~/.config/starship.toml                            # Point Starship to it's config
 
 - name: Debug message '#1'
   ansible.builtin.debug:
