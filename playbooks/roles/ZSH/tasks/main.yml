@@ -17,11 +17,11 @@
     repo: https://github.com/unixorn/fzf-zsh-plugin.git
     dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/fzf-zsh-plugin"
 
-- name: Clone Powerline10k
+- name: Clone plugin repo `Autocomplete`
   ansible.builtin.git:
     depth: 1
-    repo: https://github.com/romkatv/powerlevel10k.git
-    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/powerlevel10k"
+    repo: https://github.com/marlonrichert/zsh-autocomplete.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-autocomplete"
 
 - name: Append to  ~/.zshrc file
   blockinfile:

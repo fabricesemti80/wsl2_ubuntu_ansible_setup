@@ -1,0 +1,14 @@
+---
+tunnels:
+  - name: oy
+    user: 808fsemti
+    server: 10.13.36.201
+    exclusions: 10.13.36.53
+    vpn_name: vpn-oy
+    networks: 10.13.0.0/16 10.23.0.0/16 10.16.0.0/24 10.15.0.0/16
+  - name: gcp
+    user: fsemti
+    server: 10.64.16.236
+    exclusions: 0.0.0.0/0
+    vpn_name: vpn-gcp
+    networks: 10.64.36.0/24

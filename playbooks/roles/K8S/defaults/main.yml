@@ -1,0 +1,8 @@
+---
+users:
+  - username: "{{ primary_user_name }}"
+    antigen_libraries:
+      - name: oh-my-zsh
+    antigen_bundles:
+      # Oh My Zsh Minikube plugin
+      - name: minikube

@@ -1,0 +1,21 @@
+version: "3"
+
+tasks:
+  install-ansible:
+    desc: Install Ansible
+    cmds:
+      - ./install_ansible.sh
+      # - ansible-galaxy collection install bec.shell --force
+      # - ansible-galaxy role install gantsign.oh-my-zsh --force
+      # - ansible-galaxy role install dotstrap.fzf --force
+      - task: install-req
+
+  install-brew:
+    desc: Install Homebrew
+    cmds:
+      - ./install_brew.sh
+
+  install-req:
+    desc: Install requirements
+    cmds:
+      - ansible-galaxy install -r requirements.yml

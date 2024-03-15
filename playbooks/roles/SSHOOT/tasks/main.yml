@@ -1,0 +1,24 @@
+---
+- name: Close VPNs
+  command: sshoot stop {{ item.vpn_name }}
+  with_items: "{{ tunnels }}"
+  ignore_errors: true
+  # no_log: True
+
+- name: Remove VPNs
+  command: sshoot delete  {{ item.vpn_name }}
+  with_items: "{{ tunnels }}"
+  ignore_errors: true
+  # no_log: True
+
+- name: Create VPNs
+  command: sshoot create -r {{ item.user }}@{{ item.server }} -x {{ item.exclusions }} -HNd {{ item.vpn_name }} {{ item.networks }}
+  with_items: "{{ tunnels }}"
+
+- name: Get sshoot list output
+  shell: sshoot list
+  register: sshoot_list_output
+
+- name: Print sshoot list output
+  debug:
+    msg: "{{ sshoot_list_output.stdout_lines }}"

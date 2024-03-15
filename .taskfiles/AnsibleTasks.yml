@@ -1,0 +1,83 @@
+---
+version: "3"
+
+tasks:
+  list:
+    desc: List Ansible tags
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --list-tags
+
+  apt:
+    desc: Tasks utilising `apt` package manager
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "apt"  -i hosts.yml -K
+
+  bash:
+    desc: Configuration of 'bash' and related files
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "bash"  -i hosts.yml
+
+  brew:
+    desc: Tasks using Homebrew
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "brew"  -i hosts.yml
+
+  docker:
+    desc: Tasks configuring `Docker`
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "doc"  -i hosts.yml -K
+
+  dot:
+    desc: Task to update/create a few configuration files
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "dot"  -i hosts.yml
+
+  git:
+    desc: Tasks configuring `Git` client
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "git"  -i hosts.yml -K
+
+  k8s:
+    desc: Install K8S / Minikube
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "k8s"  -i hosts.yml  -K
+
+  nix:
+    desc: Install Nix package manager
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "nix"  -i hosts.yml -K
+
+  snap:
+    desc: Tasks using Snapd
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "snap"  -i hosts.yml -K
+      -
+  ssh:
+    desc: SSH client and server configuration
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "ssh"  -i hosts.yml
+
+  sshoot:
+    desc: Set up SSH tunneling
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "sshoot"  -i hosts.yml -K
+
+  sys:
+    desc: Tasks configuring the Linux system in general
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "sys"  -i hosts.yml -K
+
+  sporting:
+    desc: Configurations specific to Sporting Solutions Company
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "sporting"  -i hosts.yml
+
+  wsl:
+    desc: Tasks configuring `wsl`
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "wsl"  -i hosts.yml -K
+
+  zsh:
+    desc: Install ZSH
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "zsh"  -i hosts.yml -K
