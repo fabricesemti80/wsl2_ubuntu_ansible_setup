@@ -40,7 +40,7 @@ tasks:
   k8s:
     desc: Install K8S / Minikube
     cmds:
-      - ansible-playbook playbooks/machineconfig.yml --tags "k8s"  -i hosts.yml
+      - ansible-playbook playbooks/machineconfig.yml --tags "k8s"  -i hosts.yml  -K
 
   nix:
     desc: Install Nix package manager

@@ -5,3 +5,12 @@
 - name: Install tab completion for Minikube
   include_role:
     name: gantsign.antigen
+- name: Get latest kubectl version
+  uri:
+    url: https://dl.k8s.io/release/stable.txt
+    return_content: yes
+  register: version
+
+- name: Install kubectl
+  include_role:
+    name: robertdebock.kubectl

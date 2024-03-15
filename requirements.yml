@@ -20,3 +20,5 @@ roles:
   - name: geerlingguy.docker
 
   - name: geerlingguy.pip
+
+  - name: robertdebock.kubectl

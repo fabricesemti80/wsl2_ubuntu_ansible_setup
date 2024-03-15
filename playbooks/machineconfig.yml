@@ -73,7 +73,9 @@
                     - wsl
                     - git
 
-          - block:
+          - become: true
+            become_method: sudo
+            block:
                     - include_role:
                               name: K8S
             name: Install Minikube / K8s
