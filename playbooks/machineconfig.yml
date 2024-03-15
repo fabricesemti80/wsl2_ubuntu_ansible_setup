@@ -131,3 +131,12 @@
             tags:
                     - wsl
                     - nix
+  vars:
+          primary_user_name: fabrice
+          primary_user_full_name: "Fabrice Semti"
+          primary_user_email: "fabrice@fabricesemti.com"
+          primary_user_signing_key_file: ~/.ssh/id_ed25519.pub
+          primary_user_allowed_signers_file: ~/.ssh/allowed_signers
+          primary_user_signing_pub_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBJpVWYmXPpqVmlHdixDR//vdfD+sryvYmpH2Dj1/Otx
+
+          docker_compose_version: "1.29.2"

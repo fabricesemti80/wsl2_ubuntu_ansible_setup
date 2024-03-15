@@ -5,12 +5,12 @@
 
 #! Core ZSH variables
 zsh_users:
-  - fabrice
+  - "{{  primary_user_name }}"
 zsh_config_backup: true
 
 #! OH-MY-ZSH variables
 users:
-  - username: fabrice
+  - username: "{{  primary_user_name }}"
     oh_my_zsh:
       theme: agnoster
       plugins:
@@ -33,4 +33,4 @@ private_aliases:
   - name: "cls"
     command: "clear"
   - name: "vim"
-    command: "nvim"    
+    command: "nvim"
