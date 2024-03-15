@@ -1,0 +1,7 @@
+- name: Install Minikube
+  include_role:
+    name: gantsign.minikube
+
+- name: Install tab completion for Minikube
+  include_role:
+    name: gantsign.antigen

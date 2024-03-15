@@ -75,6 +75,14 @@
 
           - block:
                     - include_role:
+                              name: K8S
+            name: Install Minikube / K8s
+            tags:
+                    - wsl
+                    - k8s
+
+          - block:
+                    - include_role:
                               name: SNAP
             name: SnapD and packages
             tags:

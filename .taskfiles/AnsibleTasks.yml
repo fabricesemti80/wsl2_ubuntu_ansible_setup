@@ -37,15 +37,15 @@ tasks:
     cmds:
       - ansible-playbook playbooks/machineconfig.yml --tags "git"  -i hosts.yml -K
 
+  k8s:
+    desc: Install K8S / Minikube
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "k8s"  -i hosts.yml
+
   nix:
     desc: Install Nix package manager
     cmds:
       - ansible-playbook playbooks/machineconfig.yml --tags "nix"  -i hosts.yml -K
-
-  python:
-    desc: Install Python and required packages
-    cmds:
-      - ansible-playbook playbooks/machineconfig.yml --tags "python"  -i hosts.yml -K
 
   snap:
     desc: Tasks using Snapd
