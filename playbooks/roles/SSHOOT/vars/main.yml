@@ -11,4 +11,4 @@ tunnels:
     server: 10.64.16.236
     exclusions: 0.0.0.0/0
     vpn_name: vpn-gcp
-    networks: 10.64.36.0/24
+    networks: 10.72.24.10/32 10.64.0.0/12 10.74.0.0/16
