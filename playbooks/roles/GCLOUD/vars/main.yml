@@ -1,0 +1,3 @@
+---
+gcloud_install_dir: "/opt"
+gcloud_version: "471.0.0"

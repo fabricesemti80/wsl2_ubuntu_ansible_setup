@@ -22,3 +22,6 @@ roles:
   - name: geerlingguy.pip
 
   - name: robertdebock.kubectl
+
+  - name: ansible-gcloud
+    src: https://github.com/markosamuli/ansible-gcloud

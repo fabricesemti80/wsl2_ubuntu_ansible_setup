@@ -73,6 +73,15 @@
                     - wsl
                     - git
 
+          - block:
+                    - include_role:
+                              name: GCLOUD
+            name: Install GCloud
+            tags:
+                    - wsl
+                    - gcloud
+                    - sporting
+
           - become: true
             become_method: sudo
             block:

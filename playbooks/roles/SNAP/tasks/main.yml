@@ -9,31 +9,30 @@
   become: true
   command: snap install --classic sshoot
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+# - name: Install GCloud
+#   become: true
+#   command: snap install --classic google-cloud-cli
+#   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
-- name: Install GCloud
-  become: true
-  command: snap install --classic google-cloud-cli
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+# - name: "Add {{  extra_path }} to PATH for Bash and Zsh"
+#   # vars:
+#   #   profile_file_bash: "{{ ansible_env.HOME }}/.bashrc"
+#   #   profile_file_zsh: "{{ ansible_env.HOME }}/.zshrc"
+#   shell: echo $SHELL
+#   register: user_shell
 
-- name: "Add {{  extra_path }} to PATH for Bash and Zsh"
-  # vars:
-  #   profile_file_bash: "{{ ansible_env.HOME }}/.bashrc"
-  #   profile_file_zsh: "{{ ansible_env.HOME }}/.zshrc"
-  shell: echo $SHELL
-  register: user_shell
+# - name: "Add {{  extra_path }} to PATH for Bash"
+#   lineinfile:
+#     dest: "{{ profile_file_bash }}"
+#     line: 'export PATH="$PATH:{{  extra_path }}"'
+#     insertafter: EOF
+#     create: yes
+#   when: user_shell.stdout.find('/bash') != -1
 
-- name: "Add {{  extra_path }} to PATH for Bash"
-  lineinfile:
-    dest: "{{ profile_file_bash }}"
-    line: 'export PATH="$PATH:{{  extra_path }}"'
-    insertafter: EOF
-    create: yes
-  when: user_shell.stdout.find('/bash') != -1
-
-- name: "Add {{  extra_path }} to PATH for Zsh"
-  lineinfile:
-    dest: "{{ profile_file_zsh }}"
-    line: 'export PATH="$PATH:{{  extra_path }}"'
-    insertafter: EOF
-    create: yes
-  when: user_shell.stdout.find('/zsh') != -1
+# - name: "Add {{  extra_path }} to PATH for Zsh"
+#   lineinfile:
+#     dest: "{{ profile_file_zsh }}"
+#     line: 'export PATH="$PATH:{{  extra_path }}"'
+#     insertafter: EOF
+#     create: yes
+#   when: user_shell.stdout.find('/zsh') != -1

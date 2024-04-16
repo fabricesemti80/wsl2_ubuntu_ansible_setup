@@ -1,0 +1,7 @@
+---
+- name: Install GCLOUD
+  include_role:
+    name: ansible-gcloud
+
+- name: Install neccesary plugin
+  shell: "y | gcloud components install kubectl"

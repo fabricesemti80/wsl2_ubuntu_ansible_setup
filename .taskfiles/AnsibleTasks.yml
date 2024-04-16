@@ -37,6 +37,11 @@ tasks:
     cmds:
       - ansible-playbook playbooks/machineconfig.yml --tags "git"  -i hosts.yml -K
 
+  gcloud:
+    desc: Tasks configuring 'Gcloud' CLI''
+    cmds:
+      - ansible-playbook playbooks/machineconfig.yml --tags "gcloud"  -i hosts.yml -K
+      -
   k8s:
     desc: Install K8S / Minikube
     cmds:
