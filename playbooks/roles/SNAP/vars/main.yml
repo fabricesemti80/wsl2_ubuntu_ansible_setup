@@ -1,3 +1,6 @@
 ---
 snap_packages:
   - sshoot
+extra_path: /snap/bin
+profile_file_bash: "{{ ansible_env.HOME }}/.bashrc"
+profile_file_zsh: "{{ ansible_env.HOME }}/.zshrc"
