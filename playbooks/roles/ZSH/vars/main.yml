@@ -34,3 +34,5 @@ private_aliases:
     command: "clear"
   - name: "vim"
     command: "nvim"
+  - name: "k"
+    command: "kubectl"
