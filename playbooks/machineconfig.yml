@@ -92,13 +92,13 @@
                     - wsl
                     - k8s
 
-          - block:
-                    - include_role:
-                              name: SNAP
-            name: SnapD and packages
-            tags:
-                    - wsl
-                    - snap
+          #   - block:
+          #             - include_role:
+          #                       name: SNAP
+          #     name: SnapD and packages
+          #     tags:
+          #             - wsl
+          #             - snap
 
           - block:
                     - include_role:

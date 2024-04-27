@@ -1,6 +1,8 @@
 ---
 #? ref: https://formulae.brew.sh/
 homebrew_packages:
+    - ansible-dev-tools
+    - ansible-lint
     - awscli
     - bat
     - direnv

@@ -1,11 +1,11 @@
 ---
-version: '3'
+version: "3"
 
 vars:
   # add variables here
   {}
 
-dotenv: ['.config.env']
+dotenv: [".config.env"]
 
 env:
   EDITOR: nano
@@ -14,6 +14,7 @@ includes:
   init: .taskfiles/InitTasks.yml
   ansible: .taskfiles/AnsibleTasks.yml
   wsl: .taskfiles/WSLTasks.yml
+  srv: .taskfiles/ServerTasks.yml
 
 tasks:
   default:
