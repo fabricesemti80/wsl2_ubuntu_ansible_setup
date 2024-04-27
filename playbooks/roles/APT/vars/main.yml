@@ -21,7 +21,7 @@ apt_packages:
   - pwgen
   - ripgrep
   - software-properties-common
-  - sshoot
+  # - sshoot
   - sshuttle
   - tmux
   - tmux
