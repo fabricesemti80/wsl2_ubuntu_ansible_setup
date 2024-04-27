@@ -24,4 +24,4 @@ sudo wget https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd6
 # ansible-galaxy role install geerlingguy.pip --force
 
 # Install Go Tasks
-sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d
+sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
