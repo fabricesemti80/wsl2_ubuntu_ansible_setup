@@ -23,6 +23,7 @@
             tags:
                     - wsl
                     - apt
+                    - srv
 
           - block:
                     - include_role:
