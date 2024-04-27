@@ -26,3 +26,22 @@ apt_packages:
   - tmux
   - tmux
   - unzip
+
+  - ansible-dev-tools
+  - ansible-lint
+  - awscli
+  - bat
+  - direnv
+  - dog
+  - go-task
+  - govc
+  - helm
+  - nodejs
+  - starship
+  #- python
+  - pre-commit
+  - tfenv
+  - tgenv
+  - fzf
+  - ranger
+  - neovim
