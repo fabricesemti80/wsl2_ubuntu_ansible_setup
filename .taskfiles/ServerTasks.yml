@@ -5,7 +5,7 @@ tasks:
   work:
     desc: Prepare Server setup for work use
     cmds:
-      - ansible-playbook playbooks/machineconfig.yml --tags srv -i hosts.yml -K
+      - ansible-playbook playbooks/machineconfig.yml --tags srv -i hosts.yml -K --check --diff
 
   # home:
   #   desc: Prepare WSL installation on my personal [Windows] system [skipp Sporting-specific settings]
